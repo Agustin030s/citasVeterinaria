@@ -1,1 +1,24 @@
+body{
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+}
 
+.titulo {
+  background-color: aquamarine;
+}
+
+.contPrincipal{
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px gray;
+}
+
+#sintomas {
+  resize: none;
+  height: 100px;
+}
+
+.btnGuardar{
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+}

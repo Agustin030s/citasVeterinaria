@@ -1,8 +1,8 @@
 const ListadoDeCitas = () => {
     return (
-        <div>
+        <section>
             
-        </div>
+        </section>
     );
 };
 
