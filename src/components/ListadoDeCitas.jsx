@@ -1,7 +1,7 @@
 const ListadoDeCitas = () => {
     return (
-        <section>
-            
+        <section className="container my-2">
+            <h2>No hay citas aún</h2>
         </section>
     );
 };
