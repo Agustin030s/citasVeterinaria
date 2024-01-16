@@ -22,3 +22,9 @@ body{
 .btnGuardar{
   background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
+
+.listaCitas{
+  border: 1px solid blue;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgb(155, 155, 248);
+}
