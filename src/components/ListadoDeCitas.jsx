@@ -1,4 +1,4 @@
-const FormularioCita = () => {
+const ListadoDeCitas = () => {
     return (
         <div>
             
@@ -6,4 +6,4 @@ const FormularioCita = () => {
     );
 };
 
-export default FormularioCita;
+export default ListadoDeCitas;
