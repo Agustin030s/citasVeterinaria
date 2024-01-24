@@ -23,7 +23,7 @@ const CardCita = ({cita, borrarCita}) => {
           </div>
         </Card.Body>
         <Card.Footer className="text-end">
-          <Button>Borrar Cita</Button>
+          <Button onClick={() => borrarCita(cita.hour, cita.fech)} variant="danger">Borrar Cita</Button>
         </Card.Footer>
       </Card>
     </Col>

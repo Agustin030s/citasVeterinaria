@@ -55,10 +55,30 @@ const FormularioCita = () => {
     setSintomas("");
   };
 
-  const borrarCita = (hora, fecha) =>{
-    const arrayFiltado = listaCitas.filter((cita) => cita.hour === hora && cita.fech === fecha);
-    setListaCitas(arrayFiltado);
-  }
+  const borrarCita = (hora, fecha) => {
+    const arrayFiltado = listaCitas.filter(
+      (cita) => cita.hour !== hora && cita.fech !== fecha
+    );
+    Swal.fire({
+      title: "Estás seguro que deseas eliminar esta cita?",
+      text: "No podrás revertir está acción",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      cancelButtonText: "Cancelar",
+      confirmButtonText: "Borrar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setListaCitas(arrayFiltado);
+        Swal.fire({
+          title: "Cita eliminada!",
+          text: "La cita fue eliminada con éxito.",
+          icon: "success",
+        });
+      }
+    });
+  };
 
   return (
     <>
@@ -139,7 +159,10 @@ const FormularioCita = () => {
           </Form>
         </div>
       </section>
-      <ListadoDeCitas listaCitas={listaCitas} borrarCita={borrarCita}></ListadoDeCitas>
+      <ListadoDeCitas
+        listaCitas={listaCitas}
+        borrarCita={borrarCita}
+      ></ListadoDeCitas>
     </>
   );
 };
