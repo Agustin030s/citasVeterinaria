@@ -1,6 +1,6 @@
 import { Card, Button, Col } from "react-bootstrap";
 
-const CardCita = () => {
+const CardCita = ({cita}) => {
   return (
     <Col md={4} lg={3} className="mb-3">
       <Card>

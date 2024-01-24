@@ -1,14 +1,17 @@
 import { Col, Row } from "react-bootstrap";
 import CardCita from "./CardCita";
 
-const ListadoDeCitas = ({listaCitas}) => {
-  return (
-    <section className="container my-2 p-4 listaCitas">
-      {/* <h2>No hay citas aún</h2> */}
+const ListadoDeCitas = ({ listaCitas }) => {
+  const mostrarCard =
+    listaCitas.length !== 0 ? (
       <Row>
-        <CardCita></CardCita>
+        {listaCitas.map((cita, index) => <CardCita key={index} cita={cita}></CardCita>)}
       </Row>
-    </section>
+    ) : (
+      <h3 className="text-center py-3 bg-info">No hay citas aún</h3>
+    );
+  return (
+    <section className="container my-2 p-4 listaCitas">{mostrarCard}</section>
   );
 };
 
