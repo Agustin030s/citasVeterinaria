@@ -27,7 +27,7 @@ const FormularioCita = () => {
     if (citaFiltrada === -1) {
       const cita = {
         nomMascota: nombreMascota,
-        nomDueño: nombreDuenio,
+        nomDuenio: nombreDuenio,
         fech: fecha,
         hour: hora,
         sint: sintomas,
@@ -54,6 +54,11 @@ const FormularioCita = () => {
     setHora("");
     setSintomas("");
   };
+
+  const borrarCita = (hora, fecha) =>{
+    const arrayFiltado = listaCitas.filter((cita) => cita.hour === hora && cita.fech === fecha);
+    setListaCitas(arrayFiltado);
+  }
 
   return (
     <>
@@ -134,7 +139,7 @@ const FormularioCita = () => {
           </Form>
         </div>
       </section>
-      <ListadoDeCitas listaCitas={listaCitas}></ListadoDeCitas>
+      <ListadoDeCitas listaCitas={listaCitas} borrarCita={borrarCita}></ListadoDeCitas>
     </>
   );
 };

@@ -1,11 +1,11 @@
 import { Col, Row } from "react-bootstrap";
 import CardCita from "./CardCita";
 
-const ListadoDeCitas = ({ listaCitas }) => {
+const ListadoDeCitas = ({ listaCitas, borrarCita }) => {
   const mostrarCard =
     listaCitas.length !== 0 ? (
       <Row>
-        {listaCitas.map((cita, index) => <CardCita key={index} cita={cita}></CardCita>)}
+        {listaCitas.map((cita, index) => <CardCita key={index} cita={cita} borrarCita={borrarCita}></CardCita>)}
       </Row>
     ) : (
       <h3 className="text-center py-3 bg-info">No hay citas aún</h3>
