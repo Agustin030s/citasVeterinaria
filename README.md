@@ -1,6 +1,6 @@
 # Aplicación de Citas de Veterinaria
 
-¡Bienvenido a la Aplicación de Citas de Veterinaria! Esta aplicación te permite gestionar las citas de tus clientes de una manera sencilla y eficiente. Desarrollada en React, esta aplicación te permite agendar nuevas citas, mostrar las citas existentes en formato de tarjeta y eliminar citas cuando sea necesario. Además, todas las citas se guardan localmente en el almacenamiento del navegador para una experiencia sin problemas.
+Esta aplicación te permite gestionar las citas de tus clientes de una manera sencilla y eficiente. Desarrollada en React, esta aplicación te permite agendar nuevas citas, mostrar las citas existentes en formato de tarjeta y eliminar citas cuando sea necesario. Además, todas las citas se guardan localmente en el almacenamiento del navegador para una experiencia sin problemas.
 
 ## Características
 
